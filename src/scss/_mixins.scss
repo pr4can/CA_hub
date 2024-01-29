@@ -1,0 +1,26 @@
+@mixin flex-row-grid ($column_gap, $row_gap) {
+    display: flex;
+    align-items: flex-start;
+    row-gap: $row_gap;
+    column-gap: $column_gap;
+}
+
+@mixin flex-row-item ($count, $row_gap) {
+    width: calc((100% - (($count - 1) * $row_gap)) / $count);
+}
+
+@mixin flex-column-grid ($row_gap) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: $row_gap;
+}
+
+@mixin mask ($mask) {
+    -webkit-mask-image: $mask;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    background: $black-100;
+    transition: 0.3s background;
+}

@@ -1,0 +1,26 @@
+@import "colors";
+@import "utils";
+@import "fonts";
+@import "normalize";
+@import "typography";
+
+*,
+*::before,
+*::after {
+    font-family: Inter;
+    font-weight: 400;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    line-height: 1;
+}
+
+html {
+    font-size: 10px;
+    @media screen and (max-width: 1440px) {
+        font-size: calc(100vw / 1440 * 10);
+    }
+    @media screen and (max-width: 568px) {
+        font-size: calc(100vw / 390 * 10);
+    }
+}
