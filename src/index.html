@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('html/head.html', {
+    @@include('html/page-structure/head.html', {
         "title": "Главная"
     })
     <body>
         @@include('html/page-structure/header/header.html', {})
+        @@include('html/components/feedback-form/feedback-form-one.html', {})
+        @@include('html/components/feedback-form/feedback-form-two.html', {})
         @@include('html/page-structure/footer/footer.html', {})
     </body>
 </html>

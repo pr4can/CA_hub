@@ -5,11 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
-    <link rel="stylesheet" href="css/style.min.css" />
+    <meta name="description" content="@@description" />
+    <meta name="keywords" content="@@keywords">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta property="og:site_name" content="@@site_name">
+    <meta property="og:url" content="@@url">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Главная">
+    <meta property="og:description" content="@@description">
+    <!-- <meta property="og:image" content="files/OG.jpg"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="files/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="files/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="files/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="files/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="files/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="files/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="files/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="files/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="files/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="files/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png">
+    <link rel="manifest" href="files/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="files/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff"> -->
+    <link rel="stylesheet" href="files/fancybox/fancybox.css">
+    <link rel="stylesheet" href="files/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.min.css"/>
 </head>
-
     <body>
         
+        <section class="feedback-form py-desktop-80 py-mobile-48">
+    <div class="feedback-form__container container">
+        <div class="feedback-form__row">
+            <div class="feedback-form__column pr-desktop-48">
+                <div class="feedback-form__title title-desktop title-desktop--h1 title-desktop--semibold title-mobile title-mobile--h1 title-mobile--semibold">Получите консультацию специалиста</div>
+                <p class="feedback-form__desc text text--xl mt-desktop-24 mb-desktop-0 mt-mobile-24 mb-mobile-0">С вами свяжется один из наших экспертов и ответит на все вопросы</p>
+            </div>
+            <div class="feedback-form__column pl-desktop-48">
+                <form action="" class="feedback-form__inner feedback-form-inner">
+                    <div class="feedback-form-inner__list">
+                        <div class="feedback-form-inner__item">
+                            <label for="name-1" class="feedback-form-inner__label text-input text-input--medium text-input--semibold mb-desktop-8 mb-mobile-8">Ваше имя</label>
+                            <input id="name-1" class="input only-letters text-input text-input--large" type="text" name="name" placeholder='Иван'>
+                        </div>
+                        <div class="feedback-form-inner__item">
+                            <div class="feedback-form-inner__tabs">
+                                <div class="tab-form tab-form--ph">
+    <input class="tab-form__input" id="tab-form-ph-1" name="tab-form-1" type="radio" checked>
+    <label class="tab-form__label" for="tab-form-ph-1">
+        <span class="tab-form__icon"></span>
+        <span class="tab-form__text text-input text-input--small text-input--semibold">Звонок</span>
+    </label>
+</div>
+                                <div class="tab-form tab-form--wa">
+    <input class="tab-form__input" id="tab-form-wa-1" name="tab-form-1" type="radio" @@checked>
+    <label class="tab-form__label" for="tab-form-wa-1">
+        <span class="tab-form__icon"></span>
+        <span class="tab-form__text text-input text-input--small text-input--semibold">WhatsApp</span>
+    </label>
+</div>
+                                <div class="tab-form tab-form--tg">
+    <input class="tab-form__input" id="tab-form-tg-1" name="tab-form-1" type="radio" @@checked>
+    <label class="tab-form__label" for="tab-form-tg-1">
+        <span class="tab-form__icon"></span>
+        <span class="tab-form__text text-input text-input--small text-input--semibold">Telegram</span>
+    </label>
+</div>
+                            </div>
+                        </div>
+                        <div class="feedback-form-inner__item">
+                            <label for="name-2" class="feedback-form-inner__label text-input text-input--medium text-input--semibold mb-desktop-8 mb-mobile-8">Телефон</label>
+                            <input id="name-2" class="input @@class text-input text-input--large" type="tel" name="phone" placeholder='+7 (999) 555-55-55'>
+                        </div>
+                        <button class="button-form feedback-form-inner__button text text--l text--semibold" type="submit" @@disabled>Получить консультацию</button>
+                        <p class="feedback-form-inner__hint text-input text-input--small m-desktop-0 m-mobile-0">Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+                    </div>                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="feedback-form py-desktop-80 py-mobile-48">
+    <div class="feedback-form__container container">
+        <form action="" class="feedback-form__inner feedback-form-inner">
+            <div class="feedback-form-inner__container">
+                <div class="feedback-form-inner__row mb-desktop-16 mb-mobile-16">
+                    <div class="feedback-form-inner__item">
+                        <label for="name-2" class="feedback-form-inner__label text-input text-input--medium text-input--semibold mb-desktop-8 mb-mobile-8">Телефон</label>
+                        <input id="name-2" class="input @@class text-input text-input--large" type="tel" name="phone" placeholder='+7 (999) 555-55-55'>
+                    </div>
+                    <button class="button-form feedback-form-inner__button text text--l text--semibold" type="submit" @@disabled>Получить консультацию</button>                    
+                </div>
+                <p class="feedback-form-inner__hint text-input text-input--small m-desktop-0 m-mobile-0">Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+            </div>            
+        </form>
+    </div>
+</section>
         <footer class="footer"></footer>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js"></script>
 <script defer src="files/swiper/swiper-bundle.min.js"></script>
