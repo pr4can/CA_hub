@@ -3,6 +3,7 @@
     align-items: flex-start;
     row-gap: $row_gap;
     column-gap: $column_gap;
+    flex-wrap: wrap;
 }
 
 @mixin flex-row-item ($count, $row_gap) {

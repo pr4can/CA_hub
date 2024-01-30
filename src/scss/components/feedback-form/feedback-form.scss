@@ -1,0 +1,69 @@
+@import "../../colors";
+@import "../../mixins";
+@import "../../variables";
+
+.feedback-form {
+    background: $black-3;
+    &__row {
+        @include flex-row-grid($gap_48, $gap_48);
+    }
+    &__column {
+        @include flex-row-item(2, $gap_48);
+        @media screen and (max-width: 568px) {
+            width: 100%;
+        }
+    }
+    &-inner {
+        &__list {
+            @include flex-column-grid($gap_16);
+            width: 100%;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+        &__tabs {
+            @include flex-row-grid($gap_8, $gap_8);
+            & .tab-form--ph {
+                .tab-form__icon {
+                    -webkit-mask-image: url(../img/icon-phone.svg);
+                }
+            }
+            & .tab-form--wa {
+                .tab-form__icon {
+                    -webkit-mask-image: url(../img/icon-whatsapp.svg);
+                }
+            }
+            & .tab-form--tg {
+                .tab-form__icon {
+                    -webkit-mask-image: url(../img/icon-telegram.svg);
+                }
+            }
+        }
+        &__hint {
+            color: $black-50;
+            & > a {
+                color: $black-100;
+            }
+        }
+        &__button {
+            @media screen and (max-width: 568px) {
+                width: 100%;
+            }
+        }
+        &__container {
+            max-width: 63.2rem;
+            margin: 0 auto;
+        }
+        &__row {
+            @include flex-row-grid($gap_16, $gap_16);
+            flex-wrap: nowrap;
+            align-items: flex-end;
+            @media screen and (max-width: 568px) {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

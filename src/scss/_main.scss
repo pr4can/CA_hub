@@ -24,3 +24,13 @@ html {
         font-size: calc(100vw / 390 * 10);
     }
 }
+
+.container {
+    width: 144rem;
+    max-width: 100%;
+    padding: 0 4.8rem;
+    margin: 0 auto;
+    @media screen and (max-width: 568px) {
+        padding: 0 2.4rem;
+    }
+}

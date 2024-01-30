@@ -1,0 +1,25 @@
+<section class="feedback-form py-desktop-80 py-mobile-48">
+    <div class="feedback-form__container container">
+        <form action="" class="feedback-form__inner feedback-form-inner">
+            <div class="feedback-form-inner__container">
+                <div class="feedback-form-inner__row mb-desktop-16 mb-mobile-16">
+                    <div class="feedback-form-inner__item">
+                        <label for="name-2" class="feedback-form-inner__label text-input text-input--medium text-input--semibold mb-desktop-8 mb-mobile-8">Телефон</label>
+                        @@include('../input/input.html', {
+                            "id": "name-2",
+                            "type": "tel",
+                            "name": "phone",
+                            "placeholder": "placeholder='+7 (999) 555-55-55'"
+                        })
+                    </div>
+                    @@include('../button-form/button-form.html', {
+                        "class": "feedback-form-inner__button",
+                        "type": "submit",
+                        "text": "Получить консультацию"
+                    })                    
+                </div>
+                <p class="feedback-form-inner__hint text-input text-input--small m-desktop-0 m-mobile-0">Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+            </div>            
+        </form>
+    </div>
+</section>

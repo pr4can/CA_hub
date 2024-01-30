@@ -1,0 +1,64 @@
+<section class="feedback-form py-desktop-80 py-mobile-48">
+    <div class="feedback-form__container container">
+        <div class="feedback-form__row">
+            <div class="feedback-form__column pr-desktop-48">
+                <div class="feedback-form__title title-desktop title-desktop--h1 title-desktop--semibold title-mobile title-mobile--h1 title-mobile--semibold">Получите консультацию специалиста</div>
+                <p class="feedback-form__desc text text--xl mt-desktop-24 mb-desktop-0 mt-mobile-24 mb-mobile-0">С вами свяжется один из наших экспертов и ответит на все вопросы</p>
+            </div>
+            <div class="feedback-form__column pl-desktop-48">
+                <form action="" class="feedback-form__inner feedback-form-inner">
+                    <div class="feedback-form-inner__list">
+                        <div class="feedback-form-inner__item">
+                            <label for="name-1" class="feedback-form-inner__label text-input text-input--medium text-input--semibold mb-desktop-8 mb-mobile-8">Ваше имя</label>
+                            @@include('../input/input.html', {
+                                "id": "name-1",
+                                "class": "only-letters",
+                                "type": "text",
+                                "name": "name",
+                                "placeholder": "placeholder='Иван'"
+                            })
+                        </div>
+                        <div class="feedback-form-inner__item">
+                            <div class="feedback-form-inner__tabs">
+                                @@include('../tab-form/tab-form-icon.html', {
+                                    "class": "tab-form--ph",
+                                    "id": "tab-form-ph-1",
+                                    "name": "tab-form-1",
+                                    "checked": "checked",
+                                    "text": "Звонок"
+                                })
+                                @@include('../tab-form/tab-form-icon.html', {
+                                    "class": "tab-form--wa",
+                                    "id": "tab-form-wa-1",
+                                    "name": "tab-form-1",
+                                    "text": "WhatsApp"
+                                })
+                                @@include('../tab-form/tab-form-icon.html', {
+                                    "class": "tab-form--tg",
+                                    "id": "tab-form-tg-1",
+                                    "name": "tab-form-1",
+                                    "text": "Telegram"
+                                })
+                            </div>
+                        </div>
+                        <div class="feedback-form-inner__item">
+                            <label for="name-2" class="feedback-form-inner__label text-input text-input--medium text-input--semibold mb-desktop-8 mb-mobile-8">Телефон</label>
+                            @@include('../input/input.html', {
+                                "id": "name-2",
+                                "type": "tel",
+                                "name": "phone",
+                                "placeholder": "placeholder='+7 (999) 555-55-55'"
+                            })
+                        </div>
+                        @@include('../button-form/button-form.html', {
+                            "class": "feedback-form-inner__button",
+                            "type": "submit",
+                            "text": "Получить консультацию"
+                        })
+                        <p class="feedback-form-inner__hint text-input text-input--small m-desktop-0 m-mobile-0">Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+                    </div>                    
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

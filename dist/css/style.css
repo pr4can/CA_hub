@@ -2988,6 +2988,18 @@ html {
   }
 }
 
+.container {
+  width: 144rem;
+  max-width: 100%;
+  padding: 0 4.8rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 568px) {
+  .container {
+    padding: 0 2.4rem;
+  }
+}
+
 .tab-form:hover .tab-form__label {
   border: 0.1rem solid rgba(0, 0, 0, 0.2);
 }
@@ -3037,6 +3049,7 @@ html {
   background: rgb(255, 255, 255);
   border: 0.1rem solid rgba(0, 0, 0, 0.1);
   border-radius: 0.8rem;
+  width: 100%;
   box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.05);
   transition: 0.3s color, 0.3s border;
 }
@@ -3055,6 +3068,7 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
+  flex-shrink: 0;
   padding: 1.6rem 2.4rem;
   border-radius: 0.8rem;
   background: rgb(0, 0, 0);
@@ -3069,4 +3083,81 @@ html {
 .button-form:disabled {
   background: rgba(0, 0, 0, 0.3);
   pointer-events: none;
+}
+
+.feedback-form {
+  background: rgba(0, 0, 0, 0.03);
+}
+.feedback-form__row {
+  display: flex;
+  align-items: flex-start;
+  row-gap: 4.8rem;
+  column-gap: 4.8rem;
+  flex-wrap: wrap;
+}
+.feedback-form__column {
+  width: calc((100% - 4.8rem) / 2);
+}
+@media screen and (max-width: 568px) {
+  .feedback-form__column {
+    width: 100%;
+  }
+}
+.feedback-form-inner__list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 1.6rem;
+  width: 100%;
+}
+.feedback-form-inner__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.feedback-form-inner__tabs {
+  display: flex;
+  align-items: flex-start;
+  row-gap: 0.8rem;
+  column-gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.feedback-form-inner__tabs .tab-form--ph .tab-form__icon {
+  -webkit-mask-image: url(../img/icon-phone.svg);
+}
+.feedback-form-inner__tabs .tab-form--wa .tab-form__icon {
+  -webkit-mask-image: url(../img/icon-whatsapp.svg);
+}
+.feedback-form-inner__tabs .tab-form--tg .tab-form__icon {
+  -webkit-mask-image: url(../img/icon-telegram.svg);
+}
+.feedback-form-inner__hint {
+  color: rgba(0, 0, 0, 0.5);
+}
+.feedback-form-inner__hint > a {
+  color: rgb(0, 0, 0);
+}
+@media screen and (max-width: 568px) {
+  .feedback-form-inner__button {
+    width: 100%;
+  }
+}
+.feedback-form-inner__container {
+  max-width: 63.2rem;
+  margin: 0 auto;
+}
+.feedback-form-inner__row {
+  display: flex;
+  align-items: flex-start;
+  row-gap: 1.6rem;
+  column-gap: 1.6rem;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+@media screen and (max-width: 568px) {
+  .feedback-form-inner__row {
+    flex-wrap: wrap;
+  }
 }
