@@ -1,0 +1,22 @@
+@import "../../colors";
+@import "../../mixins";
+
+.input {
+    color: $black-100;
+    padding: 1.5rem 2.3rem;
+    background: $white-100;
+    border: 0.1rem solid $black-10;
+    border-radius: 0.8rem;
+    @include drop-shadow--sm;
+    transition: 0.3s color, 0.3s border;
+    &::placeholder {
+        color: $black-50;
+    }
+    &:hover,
+    &:focus {
+        color: $black-100;
+    }
+    &--error {
+        border-color: $color-warning-red;
+    }
+}

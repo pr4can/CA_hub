@@ -130,9 +130,9 @@ export const phoneMask = () => {
         thisValLength = thisValLength.length;
 
         if (inputPhoneValLenth !== thisValLength) {
-            thisInputPhone.classList.add("input-field--error");
+            thisInputPhone.classList.add("input--error");
         } else {
-            thisInputPhone.classList.remove("input-field--error");
+            thisInputPhone.classList.remove("input--error");
         }
     };
 };

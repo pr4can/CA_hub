@@ -2,15 +2,6 @@
 
 .text-desktop {
     @media screen and (min-width: 568px) {
-        &--medium {
-            font-weight: 500;
-        }
-        &--semibold {
-            font-weight: 600;
-        }
-        &--bold {
-            font-weight: 700;
-        }
         &--xs {
             font-weight: 400;
             font-size: 1.2rem;
@@ -40,21 +31,21 @@
             font-size: 2rem;
             line-height: 2.8rem;
             color: $black-100;
+        }
+        &--medium {
+            font-weight: 500;
+        }
+        &--semibold {
+            font-weight: 600;
+        }
+        &--bold {
+            font-weight: 700;
         }
     }
 }
 
 .text-mobile {
     @media screen and (max-width: 568px) {
-        &--medium {
-            font-weight: 500;
-        }
-        &--semibold {
-            font-weight: 600;
-        }
-        &--bold {
-            font-weight: 700;
-        }
         &--xs {
             font-weight: 400;
             font-size: 1.2rem;
@@ -85,11 +76,6 @@
             line-height: 2.8rem;
             color: $black-100;
         }
-    }
-}
-
-.title-desktop {
-    @media screen and (min-width: 568px) {
         &--medium {
             font-weight: 500;
         }
@@ -99,6 +85,53 @@
         &--bold {
             font-weight: 700;
         }
+    }
+}
+
+.text {
+    &--xs {
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: $black-100;
+    }
+    &--s {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: $black-100;
+    }
+    &--m {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: $black-100;
+    }
+    &--l {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        color: $black-100;
+    }
+    &--xl {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 2.8rem;
+        color: $black-100;
+    }
+    &--medium {
+        font-weight: 500;
+    }
+    &--semibold {
+        font-weight: 600;
+    }
+    &--bold {
+        font-weight: 700;
+    }
+}
+
+.title-desktop {
+    @media screen and (min-width: 568px) {
         &--h5 {
             font-weight: 400;
             font-size: 2.4rem;
@@ -131,11 +164,6 @@
             letter-spacing: -0.112rem;
             color: $black-100;
         }
-    }
-}
-
-.title-mobile {
-    @media screen and (max-width: 568px) {
         &--medium {
             font-weight: 500;
         }
@@ -145,6 +173,11 @@
         &--bold {
             font-weight: 700;
         }
+    }
+}
+
+.title-mobile {
+    @media screen and (max-width: 568px) {
         &--h5 {
             font-weight: 400;
             font-size: 2.2rem;
@@ -177,11 +210,6 @@
             letter-spacing: -0.072rem;
             color: $black-100;
         }
-    }
-}
-
-.text-display-desktop {
-    @media screen and (min-width: 568px) {
         &--medium {
             font-weight: 500;
         }
@@ -191,6 +219,11 @@
         &--bold {
             font-weight: 700;
         }
+    }
+}
+
+.text-display-desktop {
+    @media screen and (min-width: 568px) {
         &--three {
             font-weight: 400;
             font-size: 7.2rem;
@@ -212,11 +245,6 @@
             letter-spacing: -0.256rem;
             color: $black-100;
         }
-    }
-}
-
-.text-display-mobile {
-    @media screen and (min-width: 568px) {
         &--medium {
             font-weight: 500;
         }
@@ -226,6 +254,11 @@
         &--bold {
             font-weight: 700;
         }
+    }
+}
+
+.text-display-mobile {
+    @media screen and (min-width: 568px) {
         &--three {
             font-weight: 400;
             font-size: 4.4rem;
@@ -247,14 +280,20 @@
             letter-spacing: -0.128rem;
             color: $black-100;
         }
+        &--medium {
+            font-weight: 500;
+        }
+        &--semibold {
+            font-weight: 600;
+        }
+        &--bold {
+            font-weight: 700;
+        }
     }
 }
 
 .text-input-desktop {
     @media screen and (min-width: 568px) {
-        &--semibold {
-            font-weight: 600;
-        }
         &--small {
             font-weight: 400;
             font-size: 1.4rem;
@@ -272,15 +311,15 @@
             font-size: 1.8rem;
             line-height: 2.8rem;
             color: $black-100;
+        }
+        &--semibold {
+            font-weight: 600;
         }
     }
 }
 
 .text-input-mobile {
     @media screen and (max-width: 568px) {
-        &--semibold {
-            font-weight: 600;
-        }
         &--small {
             font-weight: 400;
             font-size: 1.4rem;
@@ -299,5 +338,32 @@
             line-height: 2.8rem;
             color: $black-100;
         }
+        &--semibold {
+            font-weight: 600;
+        }
+    }
+}
+
+.text-input {
+    &--small {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        color: $black-100;
+    }
+    &--medium {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: $black-100;
+    }
+    &--large {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        color: $black-100;
+    }
+    &--semibold {
+        font-weight: 600;
     }
 }
