@@ -1,0 +1,145 @@
+@import "../../colors";
+@import "../../mixins";
+
+.slider {
+    background: $black-3;
+    &-box {
+        position: relative;
+        &--hidden-arrows {
+            & .slider-box__arrow {
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s transform, 0.3s opacity, 0s visibility 0.3s;
+                @media screen and (max-width: 568px) {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                &--prev {
+                    transform: translateX(-5rem);
+                }
+                &--next {
+                    transform: translateX(5rem);
+                }
+                &--show {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translateX(0);
+                    transition: 0.3s transform, 0.3s opacity, 0s visibility 0s;
+                    @media screen and (max-width: 568px) {
+                        &.slider-box__arrow--prev {
+                            transform: translateX(-50%);
+                        }
+                        &.slider-box__arrow--next {
+                            transform: translateX(50%);
+                        }
+                    }
+                }
+            }
+        }
+        &__arrow {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 8rem;
+            // Скорректировать height при наличии пагинации (вычитать высоту блока пагинации)
+            height: calc(100% - 3.2rem);
+            top: 0;
+            z-index: 10;
+            cursor: pointer;
+            @media screen and (max-width: 568px) {
+                display: none;
+                width: 3.2rem;
+                height: calc(100% - 2.4rem);
+            }
+            & > button {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 5.6rem;
+                height: 5.6rem;
+                border-radius: 50%;
+                border: none;
+                background: $black-100;
+                transition: 0.3s background;
+                &::after {
+                    @include mask;
+                    content: "";
+                    position: absolute;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background: $white-100;
+                }
+            }
+            &:hover {
+                & > button {
+                    background: $black-80;
+                }
+            }
+            &--prev {
+                left: 0;
+                padding-left: 2.4rem;
+                @media screen and (max-width: 568px) {
+                    transform: translateX(-50%);
+                    padding-left: 0;
+                }
+            }
+            &--next {
+                right: 0;
+                padding-right: 2.4rem;
+                @media screen and (max-width: 568px) {
+                    transform: translateX(50%);
+                    padding-right: 0;
+                }
+            }
+        }
+        &__pagination {
+            position: static;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2.4rem;
+            &:not(.swiper-pagination-fraction) {
+                gap: 1.6rem;
+                & > .swiper-pagination-bullet {
+                    width: 0.8rem !important;
+                    height: 0.8rem !important;
+                    border-radius: 50%;
+                    margin: 0 !important;
+                    background-color: $black-20 !important;
+                    opacity: 1 !important;
+                    &-active {
+                        background-color: $black-100 !important;
+                    }
+                }
+            }
+            &.swiper-pagination-fraction {
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 2.8rem;
+                color: $black-50;
+                & > .swiper-pagination-current {
+                    font: inherit;
+                    color: $black-100;
+                    &::after {
+                        content: "\a0";
+                    }
+                }
+                & > .swiper-pagination-total {
+                    font: inherit;
+                    color: inherit;
+                    &::before {
+                        content: "\a0";
+                    }
+                }
+            }
+        }
+        &-item {
+            &__test {
+                height: 30rem;
+                background: $black-20;
+            }
+        }
+    }
+}
