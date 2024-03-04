@@ -6,8 +6,8 @@
     flex-wrap: wrap;
 }
 
-@mixin flex-row-item ($count, $row_gap) {
-    width: calc((100% - (($count - 1) * $row_gap)) / $count);
+@mixin flex-row-item ($count, $column_gap) {
+    width: calc((100% - (($count - 1) * $column_gap)) / $count);
 }
 
 @mixin flex-column-grid ($row_gap) {

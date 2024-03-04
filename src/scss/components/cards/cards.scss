@@ -1,0 +1,14 @@
+@import "../../colors";
+@import "../../mixins";
+
+.cards {
+    &__row {
+        @include flex-row-grid (4.8rem, 2.4rem);
+        & > .card-item {
+            @include flex-row-item (4, 4.8rem);
+            @media screen and (max-width: 568px) {
+                width: 100%;
+            }
+        }
+    }
+}

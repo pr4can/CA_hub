@@ -2678,14 +2678,14 @@ template {
   }
   .text-mobile--l {
     font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 2.8rem;
+    font-size: 1.7rem;
+    line-height: 2.4rem;
     color: rgb(0, 0, 0);
   }
   .text-mobile--xl {
     font-weight: 400;
-    font-size: 2rem;
-    line-height: 2.8rem;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
     color: rgb(0, 0, 0);
   }
   .text-mobile--medium {
@@ -2786,8 +2786,8 @@ template {
 @media screen and (max-width: 568px) {
   .title-mobile--h5 {
     font-weight: 400;
-    font-size: 2.2rem;
-    line-height: 2.8rem;
+    font-size: 2rem;
+    line-height: 2.6rem;
     color: rgb(0, 0, 0);
   }
   .title-mobile--h4 {
@@ -2828,21 +2828,21 @@ template {
 }
 
 @media screen and (min-width: 568px) {
-  .text-display-desktop--three {
+  .text-display-desktop--s {
     font-weight: 400;
     font-size: 7.2rem;
     line-height: 8.8rem;
     letter-spacing: -0.144rem;
     color: rgb(0, 0, 0);
   }
-  .text-display-desktop--two {
+  .text-display-desktop--m {
     font-weight: 400;
     font-size: 9.6rem;
     line-height: 11.2rem;
     letter-spacing: -0.192rem;
     color: rgb(0, 0, 0);
   }
-  .text-display-desktop--one {
+  .text-display-desktop--l {
     font-weight: 400;
     font-size: 12.8rem;
     line-height: 15.2rem;
@@ -2861,21 +2861,21 @@ template {
 }
 
 @media screen and (min-width: 568px) {
-  .text-display-mobile--three {
+  .text-display-mobile--s {
     font-weight: 400;
     font-size: 4.4rem;
     line-height: 5.6rem;
     letter-spacing: -0.088rem;
     color: rgb(0, 0, 0);
   }
-  .text-display-mobile--two {
+  .text-display-mobile--m {
     font-weight: 400;
     font-size: 5.2rem;
     line-height: 6.4rem;
     letter-spacing: -0.104rem;
     color: rgb(0, 0, 0);
   }
-  .text-display-mobile--one {
+  .text-display-mobile--l {
     font-weight: 400;
     font-size: 6.4rem;
     line-height: 7.2rem;
@@ -2894,22 +2894,22 @@ template {
 }
 
 @media screen and (min-width: 568px) {
-  .text-input-desktop--small {
+  .text-input-desktop--s {
     font-weight: 400;
     font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: rgb(0, 0, 0);
+  }
+  .text-input-desktop--m {
+    font-weight: 400;
+    font-size: 1.6rem;
     line-height: 2rem;
     color: rgb(0, 0, 0);
   }
-  .text-input-desktop--medium {
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    color: rgb(0, 0, 0);
-  }
-  .text-input-desktop--large {
+  .text-input-desktop--l {
     font-weight: 400;
     font-size: 1.8rem;
-    line-height: 2.8rem;
+    line-height: 2.4rem;
     color: rgb(0, 0, 0);
   }
   .text-input-desktop--semibold {
@@ -2918,22 +2918,22 @@ template {
 }
 
 @media screen and (max-width: 568px) {
-  .text-input-mobile--small {
+  .text-input-mobile--s {
     font-weight: 400;
     font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: rgb(0, 0, 0);
+  }
+  .text-input-mobile--m {
+    font-weight: 400;
+    font-size: 1.6rem;
     line-height: 2rem;
     color: rgb(0, 0, 0);
   }
-  .text-input-mobile--medium {
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    color: rgb(0, 0, 0);
-  }
-  .text-input-mobile--large {
+  .text-input-mobile--l {
     font-weight: 400;
     font-size: 1.8rem;
-    line-height: 2.8rem;
+    line-height: 2.4rem;
     color: rgb(0, 0, 0);
   }
   .text-input-mobile--semibold {
@@ -2941,26 +2941,105 @@ template {
   }
 }
 
-.text-input--small {
+.text-input--s {
   font-weight: 400;
   font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: rgb(0, 0, 0);
+}
+.text-input--m {
+  font-weight: 400;
+  font-size: 1.6rem;
   line-height: 2rem;
   color: rgb(0, 0, 0);
 }
-.text-input--medium {
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  color: rgb(0, 0, 0);
-}
-.text-input--large {
+.text-input--l {
   font-weight: 400;
   font-size: 1.8rem;
-  line-height: 2.8rem;
+  line-height: 2.4rem;
   color: rgb(0, 0, 0);
 }
 .text-input--semibold {
   font-weight: 600;
+}
+
+@media screen and (min-width: 568px) {
+  .button-text-desktop--s {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: rgb(0, 0, 0);
+  }
+  .button-text-desktop--m {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgb(0, 0, 0);
+  }
+  .button-text-desktop--l {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: rgb(0, 0, 0);
+  }
+  .button-text-desktop--medium {
+    font-weight: 500;
+  }
+  .button-text-desktop--bold {
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .button-text-mobile--s {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: rgb(0, 0, 0);
+  }
+  .button-text-mobile--m {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: rgb(0, 0, 0);
+  }
+  .button-text-mobile--l {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: rgb(0, 0, 0);
+  }
+  .button-text-mobile--medium {
+    font-weight: 500;
+  }
+  .button-text-mobile--bold {
+    font-weight: 700;
+  }
+}
+
+.button-text--s {
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: rgb(0, 0, 0);
+}
+.button-text--m {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: rgb(0, 0, 0);
+}
+.button-text--l {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: rgb(0, 0, 0);
+}
+.button-text--medium {
+  font-weight: 500;
+}
+.button-text--bold {
+  font-weight: 700;
 }
 
 *,
@@ -3083,6 +3162,36 @@ html {
 .button-form:disabled {
   background: rgba(0, 0, 0, 0.3);
   pointer-events: none;
+}
+
+.cards__row {
+  display: flex;
+  align-items: flex-start;
+  row-gap: 2.4rem;
+  column-gap: 4.8rem;
+  flex-wrap: wrap;
+}
+.cards__row > .card-item {
+  width: calc((100% - 14.4rem) / 4);
+}
+@media screen and (max-width: 568px) {
+  .cards__row > .card-item {
+    width: 100%;
+  }
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 1.6rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
+}
+.card-item__icon {
+  width: 6.4rem;
+  height: 6.4rem;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .feedback-form {

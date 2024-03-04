@@ -66,14 +66,14 @@
         }
         &--l {
             font-weight: 400;
-            font-size: 1.8rem;
-            line-height: 2.8rem;
+            font-size: 1.7rem;
+            line-height: 2.4rem;
             color: $black-100;
         }
         &--xl {
             font-weight: 400;
-            font-size: 2rem;
-            line-height: 2.8rem;
+            font-size: 1.8rem;
+            line-height: 2.6rem;
             color: $black-100;
         }
         &--medium {
@@ -180,8 +180,8 @@
     @media screen and (max-width: 568px) {
         &--h5 {
             font-weight: 400;
-            font-size: 2.2rem;
-            line-height: 2.8rem;
+            font-size: 2rem;
+            line-height: 2.6rem;
             color: $black-100;
         }
         &--h4 {
@@ -224,21 +224,21 @@
 
 .text-display-desktop {
     @media screen and (min-width: 568px) {
-        &--three {
+        &--s {
             font-weight: 400;
             font-size: 7.2rem;
             line-height: 8.8rem;
             letter-spacing: -0.144rem;
             color: $black-100;
         }
-        &--two {
+        &--m {
             font-weight: 400;
             font-size: 9.6rem;
             line-height: 11.2rem;
             letter-spacing: -0.192rem;
             color: $black-100;
         }
-        &--one {
+        &--l {
             font-weight: 400;
             font-size: 12.8rem;
             line-height: 15.2rem;
@@ -259,21 +259,21 @@
 
 .text-display-mobile {
     @media screen and (min-width: 568px) {
-        &--three {
+        &--s {
             font-weight: 400;
             font-size: 4.4rem;
             line-height: 5.6rem;
             letter-spacing: -0.088rem;
             color: $black-100;
         }
-        &--two {
+        &--m {
             font-weight: 400;
             font-size: 5.2rem;
             line-height: 6.4rem;
             letter-spacing: -0.104rem;
             color: $black-100;
         }
-        &--one {
+        &--l {
             font-weight: 400;
             font-size: 6.4rem;
             line-height: 7.2rem;
@@ -294,22 +294,22 @@
 
 .text-input-desktop {
     @media screen and (min-width: 568px) {
-        &--small {
+        &--s {
             font-weight: 400;
             font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: $black-100;
+        }
+        &--m {
+            font-weight: 400;
+            font-size: 1.6rem;
             line-height: 2rem;
             color: $black-100;
         }
-        &--medium {
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-            color: $black-100;
-        }
-        &--large {
+        &--l {
             font-weight: 400;
             font-size: 1.8rem;
-            line-height: 2.8rem;
+            line-height: 2.4rem;
             color: $black-100;
         }
         &--semibold {
@@ -320,22 +320,22 @@
 
 .text-input-mobile {
     @media screen and (max-width: 568px) {
-        &--small {
+        &--s {
             font-weight: 400;
             font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: $black-100;
+        }
+        &--m {
+            font-weight: 400;
+            font-size: 1.6rem;
             line-height: 2rem;
             color: $black-100;
         }
-        &--medium {
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-            color: $black-100;
-        }
-        &--large {
+        &--l {
             font-weight: 400;
             font-size: 1.8rem;
-            line-height: 2.8rem;
+            line-height: 2.4rem;
             color: $black-100;
         }
         &--semibold {
@@ -345,25 +345,110 @@
 }
 
 .text-input {
-    &--small {
+    &--s {
         font-weight: 400;
         font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: $black-100;
+    }
+    &--m {
+        font-weight: 400;
+        font-size: 1.6rem;
         line-height: 2rem;
         color: $black-100;
     }
-    &--medium {
-        font-weight: 400;
-        font-size: 1.6rem;
-        line-height: 2.4rem;
-        color: $black-100;
-    }
-    &--large {
+    &--l {
         font-weight: 400;
         font-size: 1.8rem;
-        line-height: 2.8rem;
+        line-height: 2.4rem;
         color: $black-100;
     }
     &--semibold {
         font-weight: 600;
+    }
+}
+
+.button-text-desktop {
+    @media screen and (min-width: 568px) {
+        &--s {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: $black-100;
+        }
+        &--m {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: $black-100;
+        }
+        &--l {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            color: $black-100;
+        }
+        &--medium {
+            font-weight: 500;
+        }
+        &--bold {
+            font-weight: 700;
+        }
+    }
+}
+
+.button-text-mobile {
+    @media screen and (max-width: 568px) {
+        &--s {
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            color: $black-100;
+        }
+        &--m {
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: $black-100;
+        }
+        &--l {
+            font-weight: 400;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            color: $black-100;
+        }
+        &--medium {
+            font-weight: 500;
+        }
+        &--bold {
+            font-weight: 700;
+        }
+    }
+}
+
+.button-text {
+    &--s {
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: $black-100;
+    }
+    &--m {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: $black-100;
+    }
+    &--l {
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        color: $black-100;
+    }
+    &--medium {
+        font-weight: 500;
+    }
+    &--bold {
+        font-weight: 700;
     }
 }
