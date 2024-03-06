@@ -3727,3 +3727,47 @@ html {
 .testimonials-two-slider__pagination > .swiper-pagination-bullet-active {
   background-color: rgb(0, 0, 0) !important;
 }
+
+.privacy-policy__wrapper {
+  width: 88rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 568px) {
+  .privacy-policy__wrapper {
+    width: 100%;
+  }
+}
+.privacy-policy__title {
+  margin: 0 0 4.8rem;
+}
+@media screen and (max-width: 568px) {
+  .privacy-policy__title {
+    margin-bottom: 3.2rem;
+  }
+}
+.privacy-policy__subtitle {
+  margin: 4.8rem 0;
+}
+@media screen and (max-width: 568px) {
+  .privacy-policy__subtitle {
+    margin: 3.2rem 0;
+  }
+}
+.privacy-policy__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.2rem;
+}
+@media screen and (max-width: 568px) {
+  .privacy-policy__text {
+    gap: 2.4rem;
+  }
+}
+.privacy-policy__text > p {
+  margin: 0;
+}
+.privacy-policy__text > ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
