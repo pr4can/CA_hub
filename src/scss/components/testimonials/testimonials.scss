@@ -1,0 +1,282 @@
+@import "../../colors";
+@import "../../mixins";
+@import "../../variables";
+
+.testimonials {
+    &-one {
+        &-slider {
+            width: 111.2rem;
+            margin: 0 auto;
+            @media screen and (max-width: 568px) {
+                width: 100%;
+            }
+            &-item {
+                display: flex;
+                align-items: flex-start;
+                gap: $gap_48;
+                @media screen and (max-width: 568px) {
+                    flex-wrap: wrap;
+                }
+                &__column {
+                    flex-shrink: 0;
+                    &:nth-child(1) {
+                        width: 30rem;
+                        @media screen and (max-width: 568px) {
+                            width: 100%;
+                        }
+                    }
+                    &:nth-child(2) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        width: 64.8rem;
+                        @media screen and (max-width: 568px) {
+                            width: 100%;
+                        }
+                    }
+                }
+                &__img {
+                    width: 100%;
+                    height: 30rem;
+                    background: $black-30;
+                    margin-bottom: 1.6rem;
+                    @media screen and (max-width: 568px) {
+                        width: 10.4rem;
+                        height: 10.4rem;
+                    }
+                }
+                &__name {
+                    text-align: center;
+                    @media screen and (max-width: 568px) {
+                        text-align: left;
+                    }
+                    & > p {
+                        color: $black-100;
+                        margin: 0;
+                        &:nth-child(2) {
+                            color: $black-50;
+                        }
+                    }
+                }
+                &__title {
+                    margin: 0 0 $gap_24;
+                }
+                &__desc {
+                    margin: 0 0 $gap_24;
+                }
+                &__btn {
+                    color: $black-100;
+                    padding: $gap_8 $gap_16;
+                    border: 0.1rem solid $black-100;
+                    border-radius: 9.9rem;
+                    transition: 0.3s background, 0.3s color;
+                    &:hover {
+                        color: $white-100;
+                        background: $black-100;
+                    }
+                }
+                &__bottom {
+                    display: flex;
+                    align-items: center;
+                    gap: $gap_48;
+                    margin-top: 4.8rem;
+                    @media screen and (max-width: 568px) {
+                        width: 100%;
+                        justify-content: space-between;
+                    }
+                }
+                &__navigation {
+                    display: flex;
+                    align-items: center;
+                    gap: $gap_16;
+                }
+                &__arrow {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 5.6rem;
+                    height: 5.6rem;
+                    border-radius: 50%;
+                    border: none;
+                    background: $black-100;
+                    transition: 0.3s background;
+                    &:hover {
+                        background: $black-80;
+                    }
+                    &::after {
+                        @include mask;
+                        content: "";
+                        position: absolute;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        background: $white-100;
+                    }
+                }
+                &__pagination {
+                    font-weight: 700;
+                    font-size: 2rem;
+                    line-height: 2.8rem;
+                    color: $black-50;
+                    @media screen and (max-width: 568px) {
+                        font-size: 1.8rem;
+                        line-height: 2.6rem;
+                    }
+                    & > span {
+                        font: inherit;
+                        color: $black-100;
+                    }
+                }
+            }
+        }
+    }
+    &-two {
+        background: $black-3;
+        &-slider {
+            position: relative;
+            width: 111.2rem;
+            margin: 0 auto;
+            @media screen and (max-width: 568px) {
+                width: 100%;
+            }
+            &-item {
+                display: flex;
+                align-items: flex-start;
+                gap: $gap_48;
+                background: $white-100;
+                border-radius: 1.6rem;
+                border: 0.1rem solid $black-10;
+                padding: 8rem 4.8rem;
+                @media screen and (max-width: 568px) {
+                    flex-wrap: wrap;
+                    padding: 2.4rem 2.4rem 4.8rem;
+                    gap: $gap_16;
+                }
+                &__column {
+                    flex-shrink: 0;
+                    &:nth-child(1) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        width: 64.8rem;
+                        @media screen and (max-width: 568px) {
+                            width: 100%;
+                            order: 2;
+                        }
+                    }
+                    &:nth-child(2) {
+                        width: calc(100% - 64.8rem - $gap_48);
+                        @media screen and (max-width: 568px) {
+                            width: 100%;
+                            order: 1;
+                        }
+                    }
+                }
+                &__img {
+                    width: 100%;
+                    height: 30rem;
+                    background: $black-30;
+                    @media screen and (max-width: 568px) {
+                        width: 10.4rem;
+                        height: 10.4rem;
+                    }
+                }
+                &__name {
+                    margin-bottom: 4.8rem;
+                    & > p {
+                        color: $black-100;
+                        margin: 0;
+                        &:nth-child(2) {
+                            color: $black-50;
+                        }
+                    }
+                }
+                &__title {
+                    margin: 0 0 $gap_24;
+                }
+                &__desc {
+                    margin: 0 0 $gap_24;
+                }
+                &__btn {
+                    color: $black-100;
+                    padding: $gap_8 $gap_16;
+                    border: 0.1rem solid $black-100;
+                    border-radius: 9.9rem;
+                    transition: 0.3s background, 0.3s color;
+                    &:hover {
+                        color: $white-100;
+                        background: $black-100;
+                    }
+                }
+            }
+            &__arrow {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 10.4rem;
+                // Скорректировать height при наличии пагинации (вычитать высоту блока пагинации)
+                height: calc(100% - 3.2rem);
+                top: 0;
+                z-index: 10;
+                cursor: pointer;
+                @media screen and (max-width: 568px) {
+                    display: none;
+                    width: 3.2rem;
+                    height: calc(100% - 2.4rem);
+                }
+                & > button {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 5.6rem;
+                    height: 5.6rem;
+                    border-radius: 50%;
+                    border: none;
+                    background: $black-100;
+                    transition: 0.3s background;
+                    &::after {
+                        @include mask;
+                        content: "";
+                        position: absolute;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        background: $white-100;
+                    }
+                }
+                &:hover {
+                    & > button {
+                        background: $black-80;
+                    }
+                }
+                &--prev {
+                    right: calc(100% + 1.2rem);
+                }
+                &--next {
+                    left: calc(100% + 1.2rem);
+                }
+            }
+            &__pagination {
+                position: static;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2.4rem;
+                gap: 1.6rem;
+                & > .swiper-pagination-bullet {
+                    width: 0.8rem !important;
+                    height: 0.8rem !important;
+                    border-radius: 50%;
+                    margin: 0 !important;
+                    background-color: $black-20 !important;
+                    opacity: 1 !important;
+                    &-active {
+                        background-color: $black-100 !important;
+                    }
+                }
+            }
+        }
+    }
+}

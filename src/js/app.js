@@ -1,4 +1,6 @@
 import { inputsValidate } from "./modules/inputs-validate.js";
+import { slider } from "./modules/slider/index.js";
+import { testimonials } from "./modules/testimonials/index.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const observer = lozad(".lozad", {
@@ -11,4 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     Fancybox.bind("[data-fancybox]", {});
 
     inputsValidate();
+    // slider();
+    testimonials("two");
 });
