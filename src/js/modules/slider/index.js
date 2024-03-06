@@ -19,13 +19,6 @@ function initializeSlider() {
 
     const slider = document.querySelector(".slider-box");
     const swiper = slider.querySelector(".swiper");
-
-    // let currentSlide = swiper.activeIndex + 1;
-    // let totalSlides = swiper.slides.length;
-
-    console.log(swiper.slides)
-
-    // console.log(`Текущий слайд: ${currentSlide}/${totalSlides}`);
     
     const swiperPagination = slider.querySelector(".slider-box__pagination");
     const swiperPrev = slider.querySelector(".slider-box__arrow--prev");
