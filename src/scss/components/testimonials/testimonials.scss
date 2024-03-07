@@ -108,9 +108,15 @@
                         @include mask;
                         content: "";
                         position: absolute;
+                        -webkit-mask-image: url(../img/icon-arrow.svg);
                         width: 2.4rem;
                         height: 2.4rem;
                         background: $white-100;
+                    }
+                    &--prev {
+                        &::after {
+                            transform: rotate(180deg);
+                        }                        
                     }
                 }
                 &__pagination {
@@ -240,6 +246,7 @@
                     &::after {
                         @include mask;
                         content: "";
+                        -webkit-mask-image: url(../img/icon-arrow.svg);
                         position: absolute;
                         width: 2.4rem;
                         height: 2.4rem;
@@ -253,6 +260,11 @@
                 }
                 &--prev {
                     right: calc(100% + 1.2rem);
+                    & > button {
+                        &::after {
+                            transform: rotate(180deg);
+                        }
+                    }
                 }
                 &--next {
                     left: calc(100% + 1.2rem);
