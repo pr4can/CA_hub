@@ -4273,12 +4273,11 @@ html {
   width: 2rem;
   height: 2rem;
   -webkit-mask-image: url(../img/icon-drop-down.svg);
-  transform: rotate(180deg);
   background: rgb(0, 0, 0);
   transition: 0.3s transform;
 }
 .header-three-menu__item:hover > a::after {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
 }
 .header-three-menu__item:hover > .header-three-menu-submenu {
   visibility: visible;
@@ -4346,9 +4345,7 @@ html {
   transition: 0.3s opacity 0.3s, 0.3s transform 0.3s;
 }
 .header-three-aside__wrapper {
-  display: flex;
-  flex-direction: column;
-  height: auto;
+  height: 100%;
   max-height: 100%;
   overflow: auto;
   width: 32rem;
@@ -4356,6 +4353,10 @@ html {
   opacity: 0;
   transform: translateX(20rem);
   transition: 0.3s opacity, 0.3s transform;
+}
+.header-three-aside__inner {
+  display: flex;
+  flex-direction: column;
 }
 .header-three-aside__close {
   -webkit-mask-size: contain;
@@ -4408,6 +4409,68 @@ html {
   margin: 0 -0.8rem;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
+}
+.header-three-aside-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.header-three-aside-menu__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 1.6rem;
+}
+.header-three-aside-menu__item > a {
+  color: rgb(0, 0, 0);
+  order: 1;
+}
+.header-three-aside-menu__item::after {
+  content: "";
+  order: 2;
+}
+.header-three-aside-menu__item:has(.header-three-aside-menu-submenu)::after {
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  background: rgb(0, 0, 0);
+  transition: 0.3s background;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  -webkit-mask-image: url(../img/icon-drop-down.svg);
+  background-color: rgb(0, 0, 0);
+  transition: 0.3s transform;
+}
+.header-three-aside-menu__item--open::after {
+  transform: rotate(180deg);
+}
+.header-three-aside-menu__item--open > .header-three-aside-menu-submenu {
+  margin-top: 1rem;
+}
+.header-three-aside-menu-submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  order: 3;
+  padding-left: 1.5rem;
+  margin-top: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 0.3s margin, 0.3s height;
+}
+.header-three-aside-menu-submenu__item > a {
+  color: rgb(0, 0, 0);
 }
 .header-three-aside__bottom {
   display: flex;

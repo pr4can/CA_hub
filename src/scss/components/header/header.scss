@@ -440,7 +440,6 @@
                             width: 2rem;
                             height: 2rem;
                             -webkit-mask-image: url(../img/icon-drop-down.svg);
-                            transform: rotate(180deg);
                             background: $black-100;
                             transition: 0.3s transform;
                         }
@@ -449,7 +448,7 @@
                 &:hover {
                     & > a {
                         &::after {
-                            transform: rotate(0deg);
+                            transform: rotate(180deg);
                         }
                     }
                     & > .header-three-menu-submenu {
@@ -526,9 +525,7 @@
                 }
             }
             &__wrapper {
-                display: flex;
-                flex-direction: column;
-                height: auto;
+                height: 100%;
                 max-height: 100%;
                 overflow: auto;
                 width: 32rem;
@@ -536,6 +533,10 @@
                 opacity: 0;
                 transform: translateX(20rem);
                 transition: 0.3s opacity, 0.3s transform;
+            }
+            &__inner {
+                display: flex;
+                flex-direction: column;
             }
             &__close {
                 @include mask;
@@ -585,6 +586,70 @@
                 margin: 0 -0.8rem;
                 padding-left: 0.8rem;
                 padding-right: 0.8rem;
+            }
+            &-menu {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: $gap_24;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                &__item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                    width: 100%;
+                    padding: 0 1.6rem;
+                    & > a {
+                        color: $black-100;
+                        order: 1;
+                    }
+                    &::after {
+                        content: "";
+                        order: 2;
+                    }
+                    &:has(.header-three-aside-menu-submenu) {
+                        &::after {
+                            @include mask;
+                            display: inline-block;
+                            width: 2rem;
+                            height: 2rem;
+                            -webkit-mask-image: url(../img/icon-drop-down.svg);
+                            background-color: $black-100;
+                            transition: 0.3s transform;
+                        }
+                    }
+                    &--open {
+                        &::after {
+                            transform: rotate(180deg);
+                        }
+                        & > .header-three-aside-menu-submenu {
+                            margin-top: 1rem;
+                        }
+                    }
+                }
+                &-submenu {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: $gap_12;
+                    width: 100%;
+                    margin: 0;
+                    list-style: none;
+                    order: 3;
+                    padding-left: 1.5rem;
+                    margin-top: 0;
+                    height: 0;
+                    overflow: hidden;
+                    transition: 0.3s margin, 0.3s height;
+                    &__item {
+                        & > a {
+                            color: $black-100;
+                        }
+                    }
+                }
             }
             &__bottom {
                 display: flex;
