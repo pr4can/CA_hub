@@ -1,0 +1,80 @@
+<div class="callback-big-modal">
+    <div class="callback-big-modal__wrapper">
+        <a href="#" class="callback-big-modal__close"></a>
+        <template class="callback-big-modal__content">
+            <div class="callback-big-modal__inner">
+                <div class="callback-big-modal__row">
+                    <div class="callback-big-modal__column">
+                        <div class="callback-big-modal__title title-desktop title-desktop--h2 title-desktop--semibold title-mobile title-mobile--h2 title-mobile--semibold">Получите консультацию специалиста</div>
+                        <p class="callback-big-modal__subdesc text-desktop text-desktop--xl text-mobile text-mobile--xl">С вами свяжется один из наших экспертов и ответит на все вопросы</p>
+                    </div>
+                    <div class="callback-big-modal__column">
+                        <p class="callback-big-modal__desc title-desktop title-desktop--h5 title-desktop--semibold title-mobile title-mobile--h5 title-mobile--semibold">Оставьте свой контактный телефон, мы свяжемся с вами и расскажем все особенности создания прототипа </p>
+                        <form action="" class="callback-big-modal__form callback-big-modal-form">
+                            <div class="callback-big-modal-form__list">
+                                <div class="callback-big-modal-form__item">
+                                    <label for="name-1" class="callback-big-modal-form__label text-input text-input--m text-input--semibold mb-desktop-8 mb-mobile-8">Ваше имя</label>
+                                    @@include('../../components/input/input.html', {
+                                        "id": "name-1",
+                                        "class": "only-letters",
+                                        "type": "text",
+                                        "name": "name",
+                                        "placeholder": "placeholder='Иван'"
+                                    })
+                                </div>
+                                <div class="callback-big-modal-form__item">
+                                    <div class="callback-big-modal-form__tabs">
+                                        @@include('../../components/tab-form/tab-form-icon.html', {
+                                            "class": "tab-form--ph",
+                                            "id": "tab-form-ph-1",
+                                            "name": "tab-form-1",
+                                            "checked": "checked",
+                                            "text": "Звонок",
+                                            "value": "Звонок"
+                                        })
+                                        @@include('../../components/tab-form/tab-form-icon.html', {
+                                            "class": "tab-form--wa",
+                                            "id": "tab-form-wa-1",
+                                            "name": "tab-form-1",
+                                            "text": "WhatsApp",
+                                            "value": "WhatsApp"
+                                        })
+                                        @@include('../../components/tab-form/tab-form-icon.html', {
+                                            "class": "tab-form--tg",
+                                            "id": "tab-form-tg-1",
+                                            "name": "tab-form-1",
+                                            "text": "Telegram",
+                                            "value": "Telegram"
+                                        })
+                                    </div>
+                                    <div class="callback-big-modal-form__wrapper">
+                                        @@include('../../components/input/input.html', {
+                                            "id": "nickname",
+                                            "name": "nickname",
+                                            "placeholder": "placeholder='Никнейм Telegram'"
+                                        })
+                                    </div>
+                                </div>
+                                <div class="callback-big-modal-form__item">
+                                    <label for="name-2" class="callback-big-modal-form__label text-input text-input--m text-input--semibold mb-desktop-8 mb-mobile-8">Телефон</label>
+                                    @@include('../../components/input/input.html', {
+                                        "id": "name-2",
+                                        "type": "tel",
+                                        "name": "phone",
+                                        "placeholder": "placeholder='+7 (999) 555-55-55'"
+                                    })
+                                </div>
+                                @@include('../../components/button-form/button-form.html', {
+                                    "class": "callback-big-modal-form__button",
+                                    "type": "submit",
+                                    "text": "Получить консультацию"
+                                })
+                                <p class="callback-big-modal-form__hint text-input text-input--s m-desktop-0 m-mobile-0">Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="callback-small-modal">
+    <div class="callback-small-modal__wrapper">
+        <a href="#" class="callback-small-modal__close"></a>
+        <template class="callback-small-modal__content">
+            <div class="callback-small-modal__inner">
+                <div class="callback-small-modal__title title-desktop title-desktop--h4 title-desktop--semibold title-mobile title-mobile--h4 title-mobile--semibold">Укажите свои контактные данные</div>
+                <p class="callback-small-modal__desc text-desktop text-desktop--m text-mobile text-mobile--m">Позвоним вам прямо сейчас или в другое рабочее время: мы работаем по будням с 08:00 до 19:00 по мск</p>
+                <form action="" class="callback-small-modal__form callback-small-modal-form">
+                    <div class="callback-small-modal-form__list">
+                        <div class="callback-small-modal-form__item">
+                            <label for="name-1" class="callback-small-modal-form__label text-input text-input--m text-input--semibold mb-desktop-8 mb-mobile-8">Ваше имя</label>
+                            @@include('../../components/input/input.html', {
+                                "id": "name-1",
+                                "class": "only-letters",
+                                "type": "text",
+                                "name": "name",
+                                "placeholder": "placeholder='Иван'"
+                            })
+                        </div>
+                        <div class="callback-small-modal-form__item">
+                            <label for="name-2" class="callback-small-modal-form__label text-input text-input--m text-input--semibold mb-desktop-8 mb-mobile-8">Телефон</label>
+                            @@include('../../components/input/input.html', {
+                                "id": "name-2",
+                                "type": "tel",
+                                "name": "phone",
+                                "placeholder": "placeholder='+7 (999) 555-55-55'"
+                            })
+                        </div>
+                        <div class="callback-small-modal-form__item">
+                            <label for="name-2" class="callback-small-modal-form__label text-input text-input--m text-input--semibold mb-desktop-8 mb-mobile-8">Выберите время для звонка</label>
+                            <div class="callback-small-modal-form__tabs">
+                                @@include('../../components/tab-form/tab-form.html', {
+                                    "class": "tab-form--now",
+                                    "id": "tab-form-call-now",
+                                    "name": "callback-type",
+                                    "checked": "checked",
+                                    "text": "Позвонить сейчас",
+                                    "value": "Позвонить сейчас"
+                                })
+                                @@include('../../components/tab-form/tab-form.html', {
+                                    "class": "tab-form--later",
+                                    "id": "tab-form-call-later",
+                                    "name": "callback-type",
+                                    "text": "По времени",
+                                    "value": "По времени"
+                                })
+                            </div>
+                            <div class="callback-small-modal-form__wrapper">
+                                @@include('../../components/input/input.html', {
+                                    "id": "time",
+                                    "name": "time",
+                                    "placeholder": "placeholder='Например, 10 июня в 14:00'"
+                                })
+                            </div>                            
+                        </div>
+                        @@include('../../components/button-form/button-form.html', {
+                            "class": "callback-small-modal-form__button",
+                            "type": "submit",
+                            "text": "Перезвоните мне"
+                        })
+                        <p class="callback-small-modal-form__hint text-input text-input--s m-desktop-0 m-mobile-0">Нажимая на кнопку, вы соглашаетесь с <a href="#">Политикой конфиденциальности</a></p>
+                    </div>                    
+                </form>
+            </div>
+        </template>
+    </div>
+</div>

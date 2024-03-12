@@ -1,0 +1,249 @@
+@import "../../colors";
+@import "../../mixins";
+@import "../../variables";
+
+.callback {
+    &-small-modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        visibility: hidden;
+        padding: 8rem 0;
+        opacity: 0;
+        z-index: -1;
+        transition: 0.3s opacity 0.3s, 0s visibility 0.6s, 0s z-index 0.6s;
+        @media screen and (max-width: 568px) {
+            align-items: flex-start;
+            padding: 4.8rem 0.8rem;
+        }
+        &--appear {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+            z-index: 100;
+            transition: 0.3s opacity, 0s visibility, 0s z-index;
+            & .callback-small-modal__wrapper {
+                transform: translateY(0);
+                transition: 0.3s transform 0.3s;
+            }
+        }
+        &__wrapper {
+            position: relative;
+            width: 41.6rem;
+            padding: 4rem 2.4rem 2.4rem;
+            border-radius: 1.6rem;
+            background: $white-100;
+            transform: translateY(-200vh);
+            transition: 0.3s transform;
+            @media screen and (max-width: 568px) {
+                width: 37.4rem;
+            }
+        }
+        &__close {
+            @include mask;
+            position: absolute;
+            right: 0.8rem;
+            top: 0.8rem;
+            width: 3.2rem;
+            height: 3.2rem;
+            -webkit-mask-image: url(../img/icon-cross.svg);
+            background: $black-100;
+            &:hover {
+                background: $black-50;
+            }
+        }
+        &__title {
+            color: $black-100;
+            margin: 0 0 2.4rem;
+        }
+        &__desc {
+            color: $black-100;
+            margin: 0 0 2.4rem;
+        }
+        &-form {
+            &__list {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: $gap_16;
+            }
+            &__item {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                &:has(input[name="callback-type"][value="По времени"]:checked) {
+                    .callback-small-modal-form__wrapper {
+                        height: 5.6rem;
+                        margin-top: 1.6rem;
+                    }
+                }
+            }
+            &__tabs {
+                display: flex;
+                align-items: center;
+                gap: $gap_8;
+            }
+            &__wrapper {
+                width: 100%;
+                height: 0rem;
+                margin-top: 0rem;
+                overflow: hidden;
+                transition: 0.3s margin, 0.3s height;
+            }
+            &__button {
+                width: 100%;
+            }
+            &__hint {
+                color: $black-50;
+                & > a {
+                    color: $black-100;
+                }
+            }
+        }
+    }
+    &-big-modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
+        visibility: hidden;
+        padding: 8rem 0;
+        opacity: 0;
+        z-index: -1;
+        transition: 0.3s opacity 0.3s, 0s visibility 0.6s, 0s z-index 0.6s;
+        @media screen and (max-width: 568px) {
+            align-items: flex-start;
+            padding: 4.8rem 0.8rem;
+        }
+        &--appear {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+            z-index: 100;
+            transition: 0.3s opacity, 0s visibility, 0s z-index;
+            & .callback-big-modal__wrapper {
+                transform: translateY(0);
+                transition: 0.3s transform 0.3s;
+            }
+        }
+        &__wrapper {
+            position: relative;
+            width: 111.2rem;
+            padding: 4.8rem;
+            border-radius: 1.6rem;
+            background: $white-100;
+            transform: translateY(-200vh);
+            transition: 0.3s transform;
+            @media screen and (max-width: 568px) {
+                width: 37.4rem;
+                padding: 4rem 2.4rem 2.4rem;
+            }
+        }
+        &__close {
+            @include mask;
+            position: absolute;
+            right: 0.8rem;
+            top: 0.8rem;
+            width: 3.2rem;
+            height: 3.2rem;
+            -webkit-mask-image: url(../img/icon-cross.svg);
+            background: $black-100;
+            &:hover {
+                background: $black-50;
+            }
+        }
+        &__row {
+            @include flex-row-grid($gap_48, $gap_32);
+        }
+        &__column {
+            @include flex-row-item(2, $gap_48);
+            @media screen and (max-width: 568px) {
+                width: 100%;
+            }
+        }
+        &__title {
+            color: $black-100;
+            margin: 0 0 2.4rem;
+        }
+        &__subdesc {
+            margin: 0;
+        }
+        &__desc {
+            color: $black-100;
+            margin: 0 0 4.8rem;
+            @media screen and (max-width: 568px) {
+                margin-bottom: 3.2rem;
+            }
+        }
+        &-form {
+            &__list {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: $gap_16;
+            }
+            &__item {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                &:has(input[name="tab-form-1"][value="Telegram"]:checked) {
+                    .callback-big-modal-form__wrapper {
+                        height: 5.6rem;
+                        margin-top: 1.6rem;
+                    }
+                }
+            }
+            &__tabs {
+                display: flex;
+                align-items: center;
+                gap: $gap_8;
+                & .tab-form--ph {
+                    .tab-form__icon {
+                        -webkit-mask-image: url(../img/icon-phone.svg);
+                    }
+                }
+                & .tab-form--wa {
+                    .tab-form__icon {
+                        -webkit-mask-image: url(../img/icon-whatsapp.svg);
+                    }
+                }
+                & .tab-form--tg {
+                    .tab-form__icon {
+                        -webkit-mask-image: url(../img/icon-telegram.svg);
+                    }
+                }
+            }
+            &__wrapper {
+                width: 100%;
+                height: 0rem;
+                margin-top: 0rem;
+                overflow: hidden;
+                transition: 0.3s margin, 0.3s height;
+            }
+            &__button {
+                width: 100%;
+            }
+            &__hint {
+                color: $black-50;
+                & > a {
+                    color: $black-100;
+                }
+            }
+        }
+    }
+}
