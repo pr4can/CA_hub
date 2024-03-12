@@ -1,0 +1,179 @@
+@import "../../colors";
+@import "../../mixins";
+@import "../../variables";
+
+.tabs {
+    background: $black-3;
+    overflow: hidden;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.8rem;
+        &--column {
+            flex-direction: row;
+            gap: $gap_48;
+            & > .tabs-btn {
+                width: 30rem;
+                overflow: hidden;
+                & .swiper-wrapper {
+                    height: 44.8rem;
+                }
+            }
+            & > .tabs-content {
+                width: calc(100% - 30rem - $gap_48);
+            }
+        }
+    }
+    &-btn {
+        &__swiper {
+            overflow: visible;
+        }
+        &__wrapper {
+            overflow: visible;
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: $gap_12;
+            padding: 1.2rem 1.6rem;
+            border-radius: 1.6rem;
+            background: $white-100;
+            transition: 0.3s background;
+            cursor: pointer;
+            &:hover {
+                background: $black-3;
+            }
+            &.swiper-slide-thumb-active {
+                background: $black-100;
+                & .tabs-btn-item__title {
+                    color: $white-100;
+                }
+                & .tabs-btn-item__subtitle {
+                    color: $white-50;
+                }
+            }
+            &__img {
+                flex-shrink: 0;
+                width: 5.6rem;
+                height: 5.6rem;
+                background: $black-5;
+            }
+            &__info {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: $gap_4;
+            }
+            &__title {
+                color: $black-100;
+                transition: 0.3s color;
+            }
+            &__subtitle {
+                color: $black-50;
+                transition: 0.3s color;
+            }
+        }
+    }
+    &-content {
+        position: relative;
+        &__arrow {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 10.4rem;
+            height: 100%;
+            top: 0;
+            z-index: 10;
+            cursor: pointer;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.3s transform, 0.3s opacity, 0s visibility 0.3s;
+            @media screen and (max-width: 568px) {
+                display: none;
+                width: 3.2rem;
+                visibility: visible;
+                opacity: 1;
+            }
+            & > button {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 5.6rem;
+                height: 5.6rem;
+                border-radius: 50%;
+                border: none;
+                background: $black-100;
+                cursor: pointer;
+                transition: 0.3s background;
+                &::after {
+                    @include mask;
+                    content: "";
+                    -webkit-mask-image: url(../img/icon-arrow.svg);
+                    position: absolute;
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    background: $white-100;
+                }
+            }
+            &:hover {
+                & > button {
+                    background: $black-80;
+                }
+            }
+            &--prev {
+                left: 0;
+                transform: translateX(-5rem);
+                & > button {
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+                @media screen and (max-width: 568px) {
+                    transform: translateX(-50%);
+                }
+            }
+            &--next {
+                right: 0;
+                transform: translateX(5rem);
+                @media screen and (max-width: 568px) {
+                    transform: translateX(50%);
+                }
+            }
+            &--show {
+                visibility: visible;
+                opacity: 1;
+                transform: translateX(0);
+                transition: 0.3s transform, 0.3s opacity, 0s visibility 0s;
+                @media screen and (max-width: 568px) {
+                    &.tabs-content__arrow--prev {
+                        transform: translateX(0);
+                    }
+                    &.tabs-content__arrow--next {
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+        &-item {
+            background: $white-100;
+            border: 0.1rem solid $black-10;
+            border-radius: 1.6rem;
+            &__title {
+                color: $black-100;
+                margin: 0 0 2.4rem;
+            }
+            &__desc {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: $gap_24;
+                & > p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

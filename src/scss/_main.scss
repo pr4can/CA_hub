@@ -35,6 +35,12 @@ html {
     }
 }
 
+body {
+    &.not-scrolling {
+        overflow: hidden;
+    }
+}
+
 br[desktop] {
     @media screen and (max-width: 568px) {
         display: none;
