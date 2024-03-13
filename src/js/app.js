@@ -1,5 +1,5 @@
 import { inputsValidate } from "./modules/inputs-validate.js";
-import { callback } from "./modules/callback/index.js";
+import { privacyPolicy } from "./modules/privacy-policy/index.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const observer = lozad(".lozad", {
@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", () => {
     Fancybox.bind("[data-fancybox]", {});
 
     inputsValidate();
-    callback("two");
+    privacyPolicy();
 });

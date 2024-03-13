@@ -17,7 +17,7 @@
     }
     &__subtitle {
         margin: 4.8rem 0;
-        @media screen and (max-width: 568px)  {
+        @media screen and (max-width: 568px) {
             margin: 3.2rem 0;
         }
     }
@@ -35,6 +35,91 @@
         & > ul {
             margin-top: 0;
             margin-bottom: 0;
+        }
+    }
+    &-modal {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        overflow: auto;
+        visibility: hidden;
+        padding: 8rem 0;
+        opacity: 0;
+        z-index: -1;
+        transition: 0.3s opacity 0.3s, 0s visibility 0.6s, 0s z-index 0.6s;
+        @media screen and (max-width: 568px) {
+            padding: 4.8rem 0.8rem;
+        }
+        &--appear {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+            z-index: 100;
+            transition: 0.3s opacity, 0s visibility, 0s z-index;
+            & .privacy-policy-modal__wrapper {
+                transform: translateY(0);
+                transition: 0.3s transform 0.3s;
+            }
+        }
+        &__wrapper {
+            position: relative;
+            width: 64.8rem;
+            padding: 4.8rem;
+            border-radius: 1.6rem;
+            background: $white-100;
+            transform: translateY(-200vh);
+            transition: 0.3s transform;
+            @include drop-shadow--2xl;
+            @media screen and (max-width: 568px) {
+                width: 37.4rem;
+            }
+        }
+        &__close {
+            @include mask;
+            position: absolute;
+            right: 0.8rem;
+            top: 0.8rem;
+            width: 3.2rem;
+            height: 3.2rem;
+            -webkit-mask-image: url(../img/icon-cross.svg);
+            background: $black-100;
+            &:hover {
+                background: $black-50;
+            }
+        }
+        &__title {
+            margin: 0 0 4.8rem;
+            @media screen and (max-width: 568px) {
+                margin-bottom: 3.2rem;
+            }
+        }
+        &__subtitle {
+            margin: 4.8rem 0;
+            @media screen and (max-width: 568px) {
+                margin: 3.2rem 0;
+            }
+        }
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3.2rem;
+            @media screen and (max-width: 568px) {
+                gap: 2.4rem;
+            }
+            & > p {
+                margin: 0;
+            }
+            & > ul {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
         }
     }
 }
