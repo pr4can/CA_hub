@@ -3799,6 +3799,105 @@ body.not-scrolling {
   margin-top: 0;
   margin-bottom: 0;
 }
+.privacy-policy-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+  visibility: hidden;
+  padding: 8rem 0;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.3s opacity 0.3s, 0s visibility 0.6s, 0s z-index 0.6s;
+}
+@media screen and (max-width: 568px) {
+  .privacy-policy-modal {
+    padding: 4.8rem 0.8rem;
+  }
+}
+.privacy-policy-modal--appear {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+  transition: 0.3s opacity, 0s visibility, 0s z-index;
+}
+.privacy-policy-modal--appear .privacy-policy-modal__wrapper {
+  transform: translateY(0);
+  transition: 0.3s transform 0.3s;
+}
+.privacy-policy-modal__wrapper {
+  position: relative;
+  width: 64.8rem;
+  padding: 4.8rem;
+  border-radius: 1.6rem;
+  background: rgb(255, 255, 255);
+  transform: translateY(-200vh);
+  transition: 0.3s transform;
+  box-shadow: 0 2.5rem 2.5rem 0 rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 568px) {
+  .privacy-policy-modal__wrapper {
+    width: 37.4rem;
+  }
+}
+.privacy-policy-modal__close {
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  background: rgb(0, 0, 0);
+  transition: 0.3s background;
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  -webkit-mask-image: url(../img/icon-cross.svg);
+  background: rgb(0, 0, 0);
+}
+.privacy-policy-modal__close:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.privacy-policy-modal__title {
+  margin: 0 0 4.8rem;
+}
+@media screen and (max-width: 568px) {
+  .privacy-policy-modal__title {
+    margin-bottom: 3.2rem;
+  }
+}
+.privacy-policy-modal__subtitle {
+  margin: 4.8rem 0;
+}
+@media screen and (max-width: 568px) {
+  .privacy-policy-modal__subtitle {
+    margin: 3.2rem 0;
+  }
+}
+.privacy-policy-modal__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3.2rem;
+}
+@media screen and (max-width: 568px) {
+  .privacy-policy-modal__text {
+    gap: 2.4rem;
+  }
+}
+.privacy-policy-modal__text > p {
+  margin: 0;
+}
+.privacy-policy-modal__text > ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 .header-one__row {
   position: relative;
